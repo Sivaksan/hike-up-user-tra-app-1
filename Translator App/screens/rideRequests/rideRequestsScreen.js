@@ -29,7 +29,7 @@ const RideRequestsScreen = ({ navigation, onPress }) => {
         return (
             <View style={styles.requestTimingInfoWrapStyle}>
                 <Text numberOfLines={1} style={{ ...Fonts.primaryColor18Bold }}>
-                    Ride Request Received
+                    Connection Request Received
                 </Text>
                 <Text style={{ ...Fonts.blackColor16Bold }}>
                     0:30 sec left
@@ -118,7 +118,7 @@ const RideRequestsScreen = ({ navigation, onPress }) => {
                     </View>
                     <View style={{ marginRight: Sizes.fixPadding * 4.0, alignItems: 'center' }}>
                         <Text style={{ ...Fonts.grayColor14SemiBold }}>
-                            Ride fare
+                            Connection fare
                         </Text>
                         <Text style={{ ...Fonts.blackColor15Bold }}>
                             $30.50
@@ -126,7 +126,7 @@ const RideRequestsScreen = ({ navigation, onPress }) => {
                     </View>
                     <View style={{ alignItems: 'center' }}>
                         <Text style={{ ...Fonts.grayColor14SemiBold }}>
-                            Ride type
+                            Connection type
                         </Text>
                         <Text style={{ ...Fonts.blackColor15Bold }}>
                             Mini
@@ -180,10 +180,10 @@ const RideRequestsScreen = ({ navigation, onPress }) => {
             <View>
                 <View style={styles.tripRouteTitleWrapStyle}>
                     <Text style={{ ...Fonts.blackColor18Bold }}>
-                        Trip Route
+                        Connection mode
                     </Text>
                     <Text style={{ ...Fonts.primaryColor14Bold }}>
-                        10 km (15 min)
+                        meet in person
                     </Text>
                 </View>
                 {currentLocationInfo()}
@@ -303,7 +303,7 @@ const RideRequestsScreen = ({ navigation, onPress }) => {
                 <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                     <View style={{ maxWidth: width / 2.5, marginHorizontal: Sizes.fixPadding + 9.0, alignItems: 'center' }}>
                         <Text numberOfLines={1} style={{ ...Fonts.grayColor14Regular }}>
-                            Ride fare
+                        Connection fare
                         </Text>
                         <Text numberOfLines={1} style={{ ...Fonts.blackColor15SemiBold }}>
                             $22.50

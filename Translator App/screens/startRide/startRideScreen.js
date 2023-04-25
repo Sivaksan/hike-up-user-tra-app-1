@@ -52,7 +52,7 @@ const StartRideScreen = ({ navigation }) => {
                 style={styles.buttonStyle}
             >
                 <Text style={{ ...Fonts.whiteColor18Bold }}>
-                    Begin Ride
+                    Notify " Translator on the way " to user
                 </Text>
             </TouchableOpacity>
         )

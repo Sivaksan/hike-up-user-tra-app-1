@@ -162,7 +162,7 @@ const SelectCabScreen = ({ navigation }) => {
                 style={styles.buttonStyle}
             >
                 <Text style={{ ...Fonts.whiteColor18Bold }}>
-                    Book Ride
+                    Book Translator
                 </Text>
             </TouchableOpacity>
         )
@@ -178,7 +178,7 @@ const SelectCabScreen = ({ navigation }) => {
                     onPress={() => navigation.pop()}
                 />
                 <Text style={{ flex: 1, marginLeft: Sizes.fixPadding + 2.0, ...Fonts.blackColor20ExtraBold }}>
-                    Choose a Cab
+                    Choose a Translator
                 </Text>
             </View>
         )

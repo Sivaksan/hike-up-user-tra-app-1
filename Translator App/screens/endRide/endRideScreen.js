@@ -53,7 +53,7 @@ const EndRideScreen = ({ navigation }) => {
                 style={styles.buttonStyle}
             >
                 <Text style={{ ...Fonts.whiteColor18Bold }}>
-                    End Ride
+                    End Connection
                 </Text>
             </TouchableOpacity>
         )
@@ -72,7 +72,7 @@ const EndRideScreen = ({ navigation }) => {
         return (
             <View>
                 <Text style={{ marginHorizontal: Sizes.fixPadding * 2.0, ...Fonts.blackColor18Bold }}>
-                    Trip Route
+                    Connection mode
                 </Text>
                 {currentLocationInfo()}
                 {currentToDropLocDivider()}

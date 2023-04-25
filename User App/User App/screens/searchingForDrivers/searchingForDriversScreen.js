@@ -93,7 +93,7 @@ const SearchingForDriversScreen = ({ navigation }) => {
                     style={{ width: '100%', height: width / 2.5, resizeMode: 'contain' }}
                 />
                 <Text style={{ ...Fonts.blackColor16Regular, textAlign: 'center', margin: Sizes.fixPadding * 2.0, }}>
-                    Hold on!! We are searching for{`\n`}nearby driver for you
+                    Hold on!! We are searching for{`\n`}nearby Translator for you
                 </Text>
             </View>
         )

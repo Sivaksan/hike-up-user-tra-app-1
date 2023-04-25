@@ -85,7 +85,7 @@ const HomeScreen = ({ navigation }) => {
                 />
                 <View style={{ flex: 1, marginLeft: Sizes.fixPadding + 5.0, }}>
                     <Text style={{ ...Fonts.whiteColor13Bold }}>
-                        12 Rides | $ 350.50
+                        2 connections | $ 350.50
                     </Text>
                     <Text style={{ marginTop: Sizes.fixPadding - 5.0, ...Fonts.whiteColor12SemiBold }}>
                         Today

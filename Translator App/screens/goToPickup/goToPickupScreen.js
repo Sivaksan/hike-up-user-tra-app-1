@@ -52,7 +52,7 @@ const GoToPickupScreen = ({ navigation }) => {
                 style={styles.buttonStyle}
             >
                 <Text style={{ ...Fonts.whiteColor18Bold }}>
-                    Go to Pickup
+                    Go to Meetup
                 </Text>
             </TouchableOpacity>
         )
@@ -76,7 +76,7 @@ const GoToPickupScreen = ({ navigation }) => {
                 <View style={{ marginTop: Sizes.fixPadding, flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                     <View style={{ maxWidth: width / 2.5, marginHorizontal: Sizes.fixPadding + 9.0, alignItems: 'center' }}>
                         <Text numberOfLines={1} style={{ ...Fonts.grayColor14Regular }}>
-                            Ride fare
+                            Connection fare
                         </Text>
                         <Text numberOfLines={1} style={{ ...Fonts.blackColor15SemiBold }}>
                             $22.50

@@ -93,7 +93,7 @@ const SelectPaymentMethodScreen = ({ navigation }) => {
                 style={{ ...styles.buttonStyle, position: 'absolute', bottom: 0.0, right: 0.0, left: 0.0, }}
             >
                 <Text style={{ ...Fonts.whiteColor18Bold }}>
-                    Book Ride
+                    Book Translator
                 </Text>
             </TouchableOpacity>
         )

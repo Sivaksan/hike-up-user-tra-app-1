@@ -74,7 +74,7 @@ const RideDetailScreen = ({ navigation }) => {
                     </View>
                     <View style={{ marginRight: Sizes.fixPadding * 4.0, alignItems: 'center' }}>
                         <Text style={{ ...Fonts.grayColor14SemiBold }}>
-                            Ride fare
+                            Connection fare
                         </Text>
                         <Text style={{ ...Fonts.blackColor15Bold }}>
                             $30.50
@@ -82,7 +82,7 @@ const RideDetailScreen = ({ navigation }) => {
                     </View>
                     <View style={{ alignItems: 'center' }}>
                         <Text style={{ ...Fonts.grayColor14SemiBold }}>
-                            Ride type
+                        Connection type
                         </Text>
                         <Text style={{ ...Fonts.blackColor15Bold }}>
                             Mini
@@ -220,7 +220,7 @@ const RideDetailScreen = ({ navigation }) => {
                 <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                     <View style={{ maxWidth: width / 2.5, marginHorizontal: Sizes.fixPadding + 9.0, alignItems: 'center' }}>
                         <Text numberOfLines={1} style={{ ...Fonts.grayColor14Regular }}>
-                            Ride fare
+                        Connection fare
                         </Text>
                         <Text numberOfLines={1} style={{ ...Fonts.blackColor15SemiBold }}>
                             $22.50

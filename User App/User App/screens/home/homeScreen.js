@@ -86,7 +86,7 @@ const HomeScreen = ({ navigation }) => {
         <SafeAreaView style={{ flex: 1, backgroundColor: Colors.whiteColor }}>
             <StatusBar translucent={false} backgroundColor={Colors.primaryColor} />
             <View style={{ flex: 1, }}>
-                {nearestCabsInfo()}
+                {nearestInfo()}
                 {currentLocationWithMenuIcon()}
                 {nearestLocationsSheet()}
             </View>
@@ -178,13 +178,13 @@ const HomeScreen = ({ navigation }) => {
             >
                 <MaterialIcons name="search" size={24} color={Colors.primaryColor} />
                 <Text style={{ flex: 1, marginLeft: Sizes.fixPadding, ...Fonts.blackColor15SemiBold }}>
-                    Where to go?
+                    Where to Meet?
                 </Text>
             </TouchableOpacity>
         )
     }
 
-    function nearestCabsInfo() {
+    function nearestInfo() {
         const userCurrentLocation = {
             latitude: 22.644066,
             longitude: 88.421220,

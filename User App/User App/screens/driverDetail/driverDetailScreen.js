@@ -232,7 +232,7 @@ const DriverDetailScreen = ({ navigation }) => {
                     style={styles.cancelRideButtonStyle}
                 >
                     <Text style={{ ...Fonts.whiteColor18Bold }}>
-                        Cancel Ride
+                        Cancel Connection
                     </Text>
                 </TouchableOpacity>
             </View>
