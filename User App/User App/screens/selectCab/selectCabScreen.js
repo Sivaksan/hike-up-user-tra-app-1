@@ -12,39 +12,33 @@ const { width, height } = Dimensions.get('window');
 const cabsList = [
     {
         id: '1',
-        cabImage: require('../../assets/images/cabs/cab1.png'),
-        cabName: 'Sedan',
-        amount: 30.50,
+        cabImage: require('../../assets/images/cabs/t1.png'),
+        cabName: 'Max',
+        amount: 0
     },
     {
         id: '2',
-        cabImage: require('../../assets/images/cabs/cab2.png'),
-        cabName: 'Nexon',
-        amount: 32.50,
+        cabImage: require('../../assets/images/cabs/t2.png'),
+        cabName: 'Very nearby',
+        amount: 20.50,
     },
     {
         id: '3',
-        cabImage: require('../../assets/images/cabs/cab3.png'),
-        cabName: 'Baleno',
+        cabImage: require('../../assets/images/cabs/t3.png'),
+        cabName: 'Nearby',
         amount: 30.50,
     },
     {
         id: '4',
-        cabImage: require('../../assets/images/cabs/cab4.png'),
-        cabName: 'Sedan',
-        amount: 30.50,
+        cabImage: require('../../assets/images/cabs/t4.png'),
+        cabName: 'Prof',
+        amount: 40.00,
     },
     {
         id: '5',
-        cabImage: require('../../assets/images/cabs/cab5.png'),
-        cabName: 'Nexon',
-        amount: 32.50,
-    },
-    {
-        id: '6',
-        cabImage: require('../../assets/images/cabs/cab6.png'),
-        cabName: 'Baleno',
-        amount: 30.50,
+        cabImage: require('../../assets/images/cabs/t5.png'),
+        cabName: 'Prof',
+        amount: 40.50,
     },
 ];
 

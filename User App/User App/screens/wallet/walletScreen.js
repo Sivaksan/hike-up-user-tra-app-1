@@ -7,7 +7,7 @@ const recentTransactions = [
     {
         id: '1',
         userImage: require('../../assets/images/users/user3.png'),
-        transactionTitle: 'Paid for ride',
+        transactionTitle: 'Paid for ',
         transactionDate: 'Today',
         transactionTime: '10:25 am',
         isCredit: false,
@@ -16,7 +16,7 @@ const recentTransactions = [
     {
         id: '2',
         userImage: require('../../assets/images/users/user6.png'),
-        transactionTitle: 'Paid for ride',
+        transactionTitle: 'Paid for translator',
         transactionDate: 'Wed 17 Jun, 2020',
         transactionTime: '07:39 am',
         isCredit: false,
@@ -52,7 +52,7 @@ const recentTransactions = [
     {
         id: '6',
         userImage: require('../../assets/images/users/user4.png'),
-        transactionTitle: 'Paid for ride',
+        transactionTitle: 'Paid for translator',
         transactionDate: 'Mon 01 Jun, 2020',
         transactionTime: '05:05 pm',
         isCredit: false,
@@ -79,7 +79,7 @@ const recentTransactions = [
     {
         id: '9',
         userImage: require('../../assets/images/users/user12.png'),
-        transactionTitle: 'Paid for ride',
+        transactionTitle: 'Paid for translator',
         transactionDate: 'Mon 08 Jun, 2020',
         transactionTime: '01:55 am',
         isCredit: false,

@@ -81,7 +81,7 @@ const DriverDetailScreen = ({ navigation }) => {
                     </View>
                     <View style={{ marginRight: Sizes.fixPadding * 4.0, alignItems: 'center' }}>
                         <Text style={{ ...Fonts.grayColor14SemiBold }}>
-                            Ride fare
+                            Translation fare
                         </Text>
                         <Text style={{ ...Fonts.blackColor15Bold }}>
                             $30.50
@@ -89,7 +89,7 @@ const DriverDetailScreen = ({ navigation }) => {
                     </View>
                     <View style={{ alignItems: 'center' }}>
                         <Text style={{ ...Fonts.grayColor14SemiBold }}>
-                            Ride type
+                            Translator type
                         </Text>
                         <Text style={{ ...Fonts.blackColor15Bold }}>
                             Mini
@@ -328,7 +328,7 @@ const DriverDetailScreen = ({ navigation }) => {
                     onPress={() => navigation.pop()}
                 />
                 <Text style={{ flex: 1, marginLeft: Sizes.fixPadding + 2.0, ...Fonts.blackColor20ExtraBold }}>
-                    Driver Detail
+                    Translator Detail
                 </Text>
             </View>
         )

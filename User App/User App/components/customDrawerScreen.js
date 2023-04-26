@@ -146,7 +146,7 @@ const CustomDrawer = props => {
                 })}
                 {divider()}
                 {drawerOptionSort({
-                    iconName: 'directions-translator',
+                    iconName: 'people',
                     option: 'My Connections',
                     onPress: () => {
                         props.navigation.closeDrawer();

@@ -116,7 +116,7 @@ const BookNowScreen = ({ navigation }) => {
                     onPress={() => navigation.pop()}
                 />
                 <Text style={{ flex: 1, marginLeft: Sizes.fixPadding + 2.0, ...Fonts.blackColor20ExtraBold }}>
-                    Book Your Ride
+                    Book Your Translator
                 </Text>
             </View>
         )

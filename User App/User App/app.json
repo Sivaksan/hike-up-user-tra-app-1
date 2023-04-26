@@ -15,12 +15,12 @@
       "**/*"
     ],
     "ios": {
-      "bundleIdentifier": "com.render.cabbookinguserapp",
+      "bundleIdentifier": "com.render.userapp",
       "buildNumber": "1.0.0",
       "supportsTablet": true
     },
     "android": {
-      "package": "com.render.cabbookinguserapp",
+      "package": "com.render.userapp",
       "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/hikeup.png",
@@ -28,7 +28,7 @@
       },
       "config": {
         "googleMaps": {
-          "apiKey": "YOUR GOOGLE MAP API KEY HERE"
+          "apiKey": "AIzaSyBiLeTTiLkm-BkYg7mY6bYgqQJdCDDcQBU"
         }
       }
     },

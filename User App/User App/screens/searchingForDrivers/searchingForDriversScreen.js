@@ -54,7 +54,7 @@ const SearchingForDriversScreen = ({ navigation }) => {
                     style={{ ...styles.buttonStyle, marginRight: Sizes.fixPadding - 8.5, }}
                 >
                     <Text numberOfLines={1} style={{ ...Fonts.whiteColor18Bold }}>
-                        Cancel Ride
+                        Cancel Translator
                     </Text>
                 </TouchableOpacity>
                 <TouchableOpacity
@@ -153,7 +153,7 @@ const SearchingForDriversScreen = ({ navigation }) => {
                                 </Text>
                             </View>
                             <Text style={{ marginLeft: Sizes.fixPadding, flex: 1, ...Fonts.blackColor14SemiBold }}>
-                                1655 Island Pkwy, Kamloops, BC V2B 6Y9
+                                Wellawate, Colombo 6. 
                             </Text>
                         </View>
                     </Callout>
@@ -165,7 +165,7 @@ const SearchingForDriversScreen = ({ navigation }) => {
                     />
                     <Callout>
                         <Text style={{ width: width / 1.5, ...Fonts.blackColor14SemiBold }}>
-                            9 Bailey Drive, Fredericton, NB E3B 5A3
+                            Heig road, Kolpitiya.
                         </Text>
                     </Callout>
                 </Marker>

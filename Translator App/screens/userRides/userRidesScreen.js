@@ -125,7 +125,7 @@ const UserRidesScreen = ({ navigation }) => {
                     onPress={() => navigation.pop()}
                 />
                 <Text style={{ flex: 1, marginLeft: Sizes.fixPadding + 2.0, ...Fonts.blackColor20ExtraBold }}>
-                    My Rides
+                    My Connections
                 </Text>
             </View>
         )

@@ -14,7 +14,7 @@ const faqsList = [
     {
         id: '2',
         questionType: 'Cab Booking',
-        question: 'Issue regarding booking a ride.',
+        question: 'Issue regarding booking a translator.',
         answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit elementum fringilla gravida blandit craseget mauris mauris. Ipsum, iaculis elementum senectus non condimentum id massa eget.',
         isExpanded: false,
     },
@@ -34,8 +34,8 @@ const faqsList = [
     },
     {
         id: '5',
-        questionType: 'Report Driver',
-        question: 'Report misbehave driver, block driver.',
+        questionType: 'Report Translator',
+        question: 'Report misbehave Translator, block Translator.',
         answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit elementum fringilla gravida blandit craseget mauris mauris. Ipsum, iaculis elementum senectus non condimentum id massa eget.',
         isExpanded: false,
     },

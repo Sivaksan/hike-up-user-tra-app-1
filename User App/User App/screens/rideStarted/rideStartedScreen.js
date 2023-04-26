@@ -53,7 +53,7 @@ const RideStartedScreen = ({ navigation }) => {
                 style={styles.buttonStyle}
             >
                 <Text style={{ ...Fonts.whiteColor18Bold }}>
-                    End Ride
+                    End Connection
                 </Text>
             </TouchableOpacity>
         )

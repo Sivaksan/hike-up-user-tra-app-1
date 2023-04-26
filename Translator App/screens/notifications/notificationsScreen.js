@@ -11,7 +11,7 @@ const notificatiosList = [
     {
         key: '1',
         title: 'System',
-        description: 'Ride ID #12354 has been cancelled by user.',
+        description: 'Translator ID #12354 has been cancelled by user.',
         time: '10 min ago',
         type: 'booking',
         isSuccess: false,

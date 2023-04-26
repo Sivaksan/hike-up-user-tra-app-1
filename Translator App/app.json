@@ -15,12 +15,12 @@
       "**/*"
     ],
     "ios": {
-      "bundleIdentifier": "com.render.cabbookingdriverapp",
+      "bundleIdentifier": "com.render.driverapp",
       "buildNumber": "1.0.0",
       "supportsTablet": true
     },
     "android": {
-      "package": "com.render.cabbookingdriverapp",
+      "package": "com.render.driverapp",
       "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/hikeup.png",

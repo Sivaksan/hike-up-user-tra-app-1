@@ -75,7 +75,7 @@ const RideDetailScreen = ({ navigation }) => {
                     </View>
                     <View style={{ marginRight: Sizes.fixPadding * 4.0, alignItems: 'center' }}>
                         <Text style={{ ...Fonts.grayColor14SemiBold }}>
-                            Ride fare
+                            Translation fare
                         </Text>
                         <Text style={{ ...Fonts.blackColor15Bold }}>
                             $30.50
@@ -83,7 +83,7 @@ const RideDetailScreen = ({ navigation }) => {
                     </View>
                     <View style={{ alignItems: 'center' }}>
                         <Text style={{ ...Fonts.grayColor14SemiBold }}>
-                            Ride type
+                            Translator type
                         </Text>
                         <Text style={{ ...Fonts.blackColor15Bold }}>
                             Mini
