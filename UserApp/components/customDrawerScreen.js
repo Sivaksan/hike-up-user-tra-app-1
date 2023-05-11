@@ -8,6 +8,8 @@ import Svg, { Path } from 'react-native-svg';
 import * as shape from "d3-shape";
 import { useDrawerStatus } from '@react-navigation/drawer';
 import { SafeAreaView } from 'react-native';
+import { signOut } from 'firebase/auth';
+import { auth } from '../firebase';
 
 const { width } = Dimensions.get("window");
 const screenHeight = Dimensions.get('window').height;
@@ -90,8 +92,12 @@ const CustomDrawer = props => {
                         <TouchableOpacity
                             activeOpacity={0.8}
                             onPress={() => {
-                                setShowLogoutDialog(false)
-                                props.navigation.push('Login')
+                                signOut(auth)
+                                    .then(() => {
+                                        console.log('Sign out successfully')
+                                        setShowLogoutDialog(false)
+                                        props.navigation.push('Login')
+                                    })
                             }}
                             style={{ ...styles.cancelAndLogoutButtonStyle, ...styles.logoutButtonStyle, }}
                         >

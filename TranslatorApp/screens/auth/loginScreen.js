@@ -1,8 +1,12 @@
-import { StyleSheet, Text, View, SafeAreaView, StatusBar, ScrollView, Dimensions, TouchableOpacity, Image, BackHandler } from 'react-native'
-import React, { useState, useCallback } from 'react'
+import { StyleSheet, Text, View, SafeAreaView, StatusBar, ScrollView, Dimensions, TouchableOpacity, Image, BackHandler, TextInput } from 'react-native'
+import React, { useState, useCallback, useRef, useEffect } from 'react'
 import { Colors, Fonts, Sizes } from '../../constants/styles'
 import IntlPhoneInput from 'react-native-intl-phone-input';
 import { useFocusEffect } from '@react-navigation/native';
+import { FirebaseRecaptchaBanner, FirebaseRecaptchaVerifierModal } from "expo-firebase-recaptcha";
+import { auth } from '../../firebase';
+import { getApp } from 'firebase/app';
+import { PhoneAuthProvider, getAuth, onAuthStateChanged, signInWithCredential } from 'firebase/auth';
 
 const { height } = Dimensions.get('window');
 
@@ -27,8 +31,28 @@ const LoginScreen = ({ navigation }) => {
         }, 1000)
     }
 
+    const app = getApp();
+    const auth = getAuth(app);
+
     const [backClickCount, setBackClickCount] = useState(0);
+
+    const recaptchaVerifier = useRef(null);
+    const [verificationId, setVerificationId] = useState();
+    const [verificationCode, setVerificationCode] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
+    const firebaseConfig = app ? app.options : undefined;
+
+    let phoneRef = useRef()
+
+    useEffect(() => {
+        onAuthStateChanged(auth, user => {
+            if (user) {
+                navigation.push('Home')
+            } else {
+                console.log('no user')
+            }
+        })
+    }, [])
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: Colors.whiteColor }}>
@@ -38,23 +62,68 @@ const LoginScreen = ({ navigation }) => {
                     {loginImage()}
                     {welcomeInfo()}
                     {mobileNumberInfo()}
+
+                    <FirebaseRecaptchaVerifierModal
+                        ref={recaptchaVerifier}
+                        firebaseConfig={firebaseConfig}
+                    // attemptInvisibleVerification
+                    />
+
                 </ScrollView>
-                {continueButton()}
             </View>
             {exitInfo()}
         </SafeAreaView>
     )
 
+    function sendCodeButton() {
+        return (
+            <TouchableOpacity
+                activeOpacity={0.8}
+                disabled={!phoneNumber}
+                onPress={async () => {
+                    // The FirebaseRecaptchaVerifierModal ref implements the
+                    // FirebaseAuthApplicationVerifier interface and can be
+                    // passed directly to `verifyPhoneNumber`.
+                    try {
+                        const phoneProvider = new PhoneAuthProvider(auth);
+                        const verificationId = await phoneProvider.verifyPhoneNumber(
+                            phoneNumber,
+                            recaptchaVerifier.current
+                        );
+                        setVerificationId(verificationId);
+
+                    } catch (err) {
+                        console.log(err.message);
+                    }
+                }}
+                style={styles.buttonStyle}
+            >
+                <Text style={{ ...Fonts.whiteColor18Bold }}>Send Verification Code</Text>
+            </TouchableOpacity>
+        )
+    }
+
     function continueButton() {
         return (
             <TouchableOpacity
                 activeOpacity={0.8}
-                onPress={() => { navigation.push('Register') }}
+                disabled={!verificationId}
+                onPress={async () => {
+                    try {
+                        const credential = PhoneAuthProvider.credential(verificationId, verificationCode);
+                        await signInWithCredential(auth, credential).then(isUser => {
+                            if (isUser.user) navigation.push('Register', {
+                                phoneNumber
+                            })
+                        })
+                        console.log('Phone authentication successful 👍')
+                    } catch (err) {
+                        console.log(err.message)
+                    }
+                }}
                 style={styles.buttonStyle}
             >
-                <Text style={{ ...Fonts.whiteColor18Bold }}>
-                    Continue
-                </Text>
+                <Text style={{ ...Fonts.whiteColor18Bold }}>Continue & Confirm Code</Text>
             </TouchableOpacity>
         )
     }
@@ -77,13 +146,22 @@ const LoginScreen = ({ navigation }) => {
         return (
             <View style={{ marginHorizontal: Sizes.fixPadding * 2.0, marginBottom: Sizes.fixPadding }}>
                 <IntlPhoneInput
-                    onChangeText={({ phoneNumber }) => setPhoneNumber(phoneNumber)}
+                    onChangeText={({ phoneNumber }) => setPhoneNumber(phoneRef.state.dialCode + phoneNumber)}
                     defaultCountry="LK"
                     containerStyle={{ backgroundColor: Colors.whiteColor, }}
                     placeholder={"Enter Your Number"}
                     phoneInputStyle={styles.phoneInputStyle}
                     dialCodeTextStyle={{ ...Fonts.blackColor15Bold, marginHorizontal: Sizes.fixPadding - 2.0, }}
+                    ref={ref => phoneRef = ref}
                 />
+                {phoneNumber !== '' && sendCodeButton()}
+                <TextInput
+                    placeholder='Enter the verification code'
+                    style={styles.phoneInputStyle}
+                    editable={!!verificationId}
+                    onChangeText={setVerificationCode}
+                />
+                {verificationCode !== '' && continueButton()}
             </View>
         )
     }

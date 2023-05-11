@@ -2,15 +2,52 @@ import { StyleSheet, Text, View, SafeAreaView, StatusBar, TouchableOpacity, Scro
 import React, { useState } from 'react'
 import { Colors, Fonts, Sizes } from "../../constants/styles";
 import { AntDesign } from '@expo/vector-icons';
+import { app, auth } from '../../firebase';
+import { doc, getDoc, getFirestore, setDoc } from 'firebase/firestore';
+import { useEffect } from 'react';
 
 const RegisterScreen = ({ navigation }) => {
 
     const [fname, setFName] = useState('');
-    const [sname, setSName] = useState('');
+    const [lname, setLName] = useState('');
     const [email, setEmail] = useState('');
-    const [phoneNumber, setPhoneNumber] = useState('');
+    // const [phoneNumber, setPhoneNumber] = useState('');
     const [nativelang, setNativeLang] = useState('');
-    const [Tlang, setTLang] = useState('');
+    const [tLang, setTLang] = useState('');
+
+    let db = getFirestore(app)
+
+    let upload = async () => {
+        if (fname !== '' && lname !== '' && email !== '' && nativelang !== '') {
+            await setDoc(doc(db, 'translateUsers', auth.currentUser.uid), {
+                firstName: fname,
+                lastName: lname,
+                email,
+                phoneNumber: auth.currentUser?.phoneNumber,
+                nativeLanguage: nativelang,
+                tLang
+            })
+                .then(() => navigation.push('Home'))
+        }
+    }
+
+    useEffect(() => {
+        let getUserData = async () => {
+            await getDoc(doc(db, 'translateUsers', auth.currentUser?.uid))
+                .then(doc => {
+                    if (doc.exists()) {
+                        setFName(doc.data().firstName)
+                        setLName(doc.data().lastName)
+                        setEmail(doc.data().email)
+                        setNativeLang(doc.data().nativeLanguage)
+                        setTLang(doc.data().tLang)
+                    }
+                })
+        }
+        getUserData()
+    }, [])
+
+
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: Colors.whiteColor }}>
             <StatusBar translucent={false} backgroundColor={Colors.primaryColor} />
@@ -18,7 +55,7 @@ const RegisterScreen = ({ navigation }) => {
                 {header()}
                 <ScrollView showsVerticalScrollIndicator={false}>
                     {FNameInfo()}
-                    {SNameInfo()}
+                    {LNameInfo()}
                     {emailInfo()}
                     {phoneNumberInfo()}
                     {NativeLangInfo()}
@@ -34,7 +71,8 @@ const RegisterScreen = ({ navigation }) => {
         return (
             <TouchableOpacity
                 activeOpacity={0.8}
-                onPress={() => { navigation.push('Verification') }}
+                onPress={upload}
+                // onPress={() => { navigation.push('Verification') }}
                 style={styles.buttonStyle}
             >
                 <Text style={{ ...Fonts.whiteColor18Bold }}>
@@ -44,43 +82,43 @@ const RegisterScreen = ({ navigation }) => {
         )
     }
 
-function TLangInfo() {
-    return (
-        <View style={{ margin: Sizes.fixPadding * 2.0, }}>
-            <Text style={{ ...Fonts.grayColor15SemiBold }}>
-                Known Language
-            </Text>
-            <TextInput
-                value={Tlang}
-                onChangeText={(value) => setName(value)}
-                style={styles.textFieldStyle}
-                cursorColor={Colors.primaryColor}
-                placeholder='Enter here...'
-                placeholderTextColor={Colors.lightGrayColor}
-            />
-            {divider()}
-        </View>
-    )
-}
+    function TLangInfo() {
+        return (
+            <View style={{ margin: Sizes.fixPadding * 2.0, }}>
+                <Text style={{ ...Fonts.grayColor15SemiBold }}>
+                    Known Language
+                </Text>
+                <TextInput
+                    value={tLang}
+                    onChangeText={(value) => setTLang(value)}
+                    style={styles.textFieldStyle}
+                    cursorColor={Colors.primaryColor}
+                    placeholder='Enter here...'
+                    placeholderTextColor={Colors.lightGrayColor}
+                />
+                {divider()}
+            </View>
+        )
+    }
 
-function NativeLangInfo() {
-    return (
-        <View style={{ margin: Sizes.fixPadding * 2.0, }}>
-            <Text style={{ ...Fonts.grayColor15SemiBold }}>
-                Native Language
-            </Text>
-            <TextInput
-                value={nativelang}
-                onChangeText={(value) => setName(value)}
-                style={styles.textFieldStyle}
-                cursorColor={Colors.primaryColor}
-                placeholder='Enter here...'
-                placeholderTextColor={Colors.lightGrayColor}
-            />
-            {divider()}
-        </View>
-    )
-}
+    function NativeLangInfo() {
+        return (
+            <View style={{ margin: Sizes.fixPadding * 2.0, }}>
+                <Text style={{ ...Fonts.grayColor15SemiBold }}>
+                    Native Language
+                </Text>
+                <TextInput
+                    value={nativelang}
+                    onChangeText={(value) => setNativeLang(value)}
+                    style={styles.textFieldStyle}
+                    cursorColor={Colors.primaryColor}
+                    placeholder='Enter here...'
+                    placeholderTextColor={Colors.lightGrayColor}
+                />
+                {divider()}
+            </View>
+        )
+    }
 
     function phoneNumberInfo() {
         return (
@@ -89,13 +127,15 @@ function NativeLangInfo() {
                     Phone Number
                 </Text>
                 <TextInput
-                    value={phoneNumber}
-                    onChangeText={(value) => setPhoneNumber(value)}
+                    value={auth.currentUser?.phoneNumber}
+                    editable={false}
+                    defaultValue={auth.currentUser?.phoneNumber}
+                    // onChangeText={(value) => setPhoneNumber(value)}
                     style={styles.textFieldStyle}
-                    cursorColor={Colors.primaryColor}
-                    keyboardType='phone-pad'
+                    // cursorColor={Colors.primaryColor}
+                    // keyboardType='phone-pad'
                     placeholder='Enter here...'
-                    placeholderTextColor={Colors.lightGrayColor}
+                // placeholderTextColor={Colors.lightGrayColor}
                 />
                 {divider()}
             </View>
@@ -122,24 +162,24 @@ function NativeLangInfo() {
         )
     }
 
-function SNameInfo() {
-    return (
-        <View style={{ margin: Sizes.fixPadding * 2.0, }}>
-            <Text style={{ ...Fonts.grayColor15SemiBold }}>
-                Second Name
-            </Text>
-            <TextInput
-                value={sname}
-                onChangeText={(value) => setName(value)}
-                style={styles.textFieldStyle}
-                cursorColor={Colors.primaryColor}
-                placeholder='Enter here...'
-                placeholderTextColor={Colors.lightGrayColor}
-            />
-            {divider()}
-        </View>
-    )
-}
+    function LNameInfo() {
+        return (
+            <View style={{ margin: Sizes.fixPadding * 2.0, }}>
+                <Text style={{ ...Fonts.grayColor15SemiBold }}>
+                    Last Name
+                </Text>
+                <TextInput
+                    value={lname}
+                    onChangeText={(value) => setLName(value)}
+                    style={styles.textFieldStyle}
+                    cursorColor={Colors.primaryColor}
+                    placeholder='Enter here...'
+                    placeholderTextColor={Colors.lightGrayColor}
+                />
+                {divider()}
+            </View>
+        )
+    }
 
     function FNameInfo() {
         return (
@@ -149,7 +189,7 @@ function SNameInfo() {
                 </Text>
                 <TextInput
                     value={fname}
-                    onChangeText={(value) => setName(value)}
+                    onChangeText={(value) => setFName(value)}
                     style={styles.textFieldStyle}
                     cursorColor={Colors.primaryColor}
                     placeholder='Enter here...'
