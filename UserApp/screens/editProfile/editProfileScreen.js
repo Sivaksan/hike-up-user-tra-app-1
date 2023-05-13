@@ -8,9 +8,9 @@ const { width } = Dimensions.get('window');
 
 const EditProfileScreen = ({ navigation }) => {
 
-    const [name, setName] = useState('Samantha Smith');
-    const [email, setEmail] = useState('samanthasmith@gmail.com');
-    const [phoneNumber, setPhoneNumber] = useState('+91 1236457890');
+    const [name, setName] = useState('Siva s');
+    const [email, setEmail] = useState('siva@gmail.com');
+    const [phoneNumber, setPhoneNumber] = useState('+94778496167');
     const [password, setPassword] = useState('123456789');
     const [showSheet, setShowSheet] = useState(false);
 

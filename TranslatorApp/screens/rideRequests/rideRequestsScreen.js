@@ -298,7 +298,7 @@ const RideRequestsScreen = ({ navigation, onPress }) => {
         return (
             <View style={{ marginTop: Sizes.fixPadding }}>
                 <Text style={{ marginBottom: Sizes.fixPadding, textAlign: 'center', ...Fonts.blackColor17SemiBold }}>
-                    Tynisha Obey
+                    Siva s
                 </Text>
                 <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                     <View style={{ maxWidth: width / 2.5, marginHorizontal: Sizes.fixPadding + 9.0, alignItems: 'center' }}>

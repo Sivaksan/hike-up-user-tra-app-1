@@ -258,10 +258,10 @@ const CustomDrawer = props => {
                 </View>
                 <View style={{ flex: 1, marginLeft: Sizes.fixPadding + 8.0, }}>
                     <Text numberOfLines={1} style={{ ...Fonts.whiteColor16Bold }}>
-                        Samantha Smith
+                        Siva s
                     </Text>
                     <Text numberOfLines={1} style={{ ...Fonts.whiteColor14Regular }}>
-                        samanthasmith@gmail.com
+                        siva@gmail.com
                     </Text>
                 </View>
             </View>

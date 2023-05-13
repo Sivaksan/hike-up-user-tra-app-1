@@ -6,7 +6,7 @@ import { AntDesign, MaterialIcons } from '@expo/vector-icons';
 const userRidesList = [
     {
         id: '1',
-        passengerName: 'Tynisha Obey',
+        passengerName: 'Siva s',
         date: 'Today',
         time: '01:17 pm',
         amount: 30.50,

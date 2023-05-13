@@ -6,8 +6,8 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 const ContactUsScreen = ({ navigation }) => {
 
-    const [name, setName] = useState('Samantha Smith');
-    const [email, setEmail] = useState('samanthasmith@gmail.com');
+    const [name, setName] = useState('Siva s');
+    const [email, setEmail] = useState('siva@gmail.com');
     const [message, setMessage] = useState('');
 
     return (

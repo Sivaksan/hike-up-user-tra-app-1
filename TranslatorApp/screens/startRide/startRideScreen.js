@@ -71,7 +71,7 @@ const StartRideScreen = ({ navigation }) => {
         return (
             <View style={{ marginTop: Sizes.fixPadding, marginBottom: Sizes.fixPadding * 3.0 }}>
                 <Text style={{ textAlign: 'center', ...Fonts.blackColor17SemiBold }}>
-                    Tynisha Obey
+                    Siva s
                 </Text>
                 <View style={{ marginTop: Sizes.fixPadding, flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                     <View style={{ maxWidth: width / 2.5, marginHorizontal: Sizes.fixPadding + 9.0, alignItems: 'center' }}>

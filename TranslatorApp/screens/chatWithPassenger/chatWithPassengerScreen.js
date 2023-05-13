@@ -160,7 +160,7 @@ const ChatWithPassengerScreen = ({ navigation }) => {
                     />
                     <View style={{ flex: 1, marginHorizontal: Sizes.fixPadding + 2.0, }}>
                         <Text numberOfLines={1} style={{ ...Fonts.blackColor18Bold }}>
-                            Tynisha Obey
+                            Siva s
                         </Text>
                         <Text style={{ ...Fonts.grayColor14SemiBold }}>
                             Online

@@ -142,7 +142,7 @@ const EndRideScreen = ({ navigation }) => {
         return (
             <View style={{ margin: Sizes.fixPadding * 2.0, marginTop: Sizes.fixPadding, }}>
                 <Text style={{ textAlign: 'center', ...Fonts.blackColor17SemiBold }}>
-                    Tynisha Obey
+                    Siva s
                 </Text>
                 <Text style={{ textAlign: 'center', ...Fonts.grayColor14Regular }}>
                     You Reached Destination
