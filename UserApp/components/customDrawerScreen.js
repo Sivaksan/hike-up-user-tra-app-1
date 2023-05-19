@@ -156,7 +156,7 @@ const CustomDrawer = props => {
                     option: 'My Connections',
                     onPress: () => {
                         props.navigation.closeDrawer();
-                        props.navigation.push('UserRides');
+                        props.navigation.push('Userconnections');
                     }
                 })}
                 {divider()}

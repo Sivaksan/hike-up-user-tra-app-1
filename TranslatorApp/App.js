@@ -7,13 +7,13 @@ import LoadingScreen from './components/loadingScreen';
 import CustomDrawer from './components/customDrawerScreen';
 import { Dimensions, LogBox } from 'react-native'
 import { Sizes } from './constants/styles';
-import ChatWithPassengerScreen from './screens/chatWithPassenger/chatWithPassengerScreen';
+import ChatWithuserScreen from './screens/chatWithuser/chatWithuserScreen';
 import GoToPickupScreen from './screens/goToPickup/goToPickupScreen';
-import StartRideScreen from './screens/startRide/startRideScreen';
-import EndRideScreen from './screens/endRide/endRideScreen';
+import StartconnectionScreen from './screens/startconnection/startconnectionScreen';
+import EndconnectionScreen from './screens/endconnection/endconnectionScreen';
 import EditProfileScreen from './screens/editProfile/editProfileScreen';
-import UserRidesScreen from './screens/userRides/userRidesScreen';
-import RideDetailScreen from './screens/rideDetail/rideDetailScreen';
+import UserconnectionsScreen from './screens/userconnections/userconnectionsScreen';
+import connectionDetailScreen from './screens/connectionDetail/connectionDetailScreen';
 import UserRatingsScreen from './screens/userRatings/userRatingsScreen';
 import WalletScreen from './screens/wallet/walletScreen';
 import NotificationsScreen from './screens/notifications/notificationsScreen';
@@ -61,13 +61,13 @@ function MyApp() {
         <Stack.Screen name="Register" component={RegisterScreen} />
         <Stack.Screen name="Verification" component={VerificationScreen} />
         <Stack.Screen name="Home" component={DrawerNavigation} options={{ ...TransitionPresets.DefaultTransition }} />
-        <Stack.Screen name="ChatWithPassenger" component={ChatWithPassengerScreen} />
+        <Stack.Screen name="ChatWithuser" component={ChatWithuserScreen} />
         <Stack.Screen name="GoToPickup" component={GoToPickupScreen} />
-        <Stack.Screen name="StartRide" component={StartRideScreen} />
-        <Stack.Screen name="EndRide" component={EndRideScreen} />
+        <Stack.Screen name="Startconnection" component={StartconnectionScreen} />
+        <Stack.Screen name="Endconnection" component={EndconnectionScreen} />
         <Stack.Screen name="EditProfile" component={EditProfileScreen} />
-        <Stack.Screen name="UserRides" component={UserRidesScreen} />
-        <Stack.Screen name="RideDetail" component={RideDetailScreen} />
+        <Stack.Screen name="Userconnections" component={UserconnectionsScreen} />
+        <Stack.Screen name="connectionDetail" component={connectionDetailScreen} />
         <Stack.Screen name="UserRatings" component={UserRatingsScreen} />
         <Stack.Screen name="Wallet" component={WalletScreen} />
         <Stack.Screen name="Notifications" component={NotificationsScreen} />

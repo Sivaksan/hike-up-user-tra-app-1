@@ -33,7 +33,7 @@ const notificatiosList = [
     {
         key: '4',
         title: 'System',
-        description: 'New ride request for you check it now!',
+        description: 'New connection request for you check it now!',
         time: '10 min ago',
         type: 'booking',
         isSuccess: true,

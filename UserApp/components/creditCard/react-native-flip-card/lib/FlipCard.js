@@ -60,7 +60,7 @@ export default class FlipCard extends Component {
       {
         toValue: Number(isFlipped),
         friction: this.props.friction,
-        useNativeDriver: this.props.useNativeDriver
+        useNativetranslator: this.props.useNativetranslator
       }
     ).start((param) => {
       this.setState({ isFlipping: false })
@@ -213,7 +213,7 @@ FlipCard.propTypes = {
   onFlipStart: PropTypes.func,
   alignHeight: PropTypes.bool,
   alignWidth: PropTypes.bool,
-  useNativeDriver: PropTypes.bool,
+  useNativetranslator: PropTypes.bool,
   children(props, propName, componentName) {
     const prop = props[propName]
     if (React.Children.count(prop) !== 2) {
@@ -238,7 +238,7 @@ FlipCard.defaultProps = {
   onFlipStart: () => { },
   alignHeight: false,
   alignWidth: false,
-  useNativeDriver: true,
+  useNativetranslator: true,
 }
 
 export class Face extends Component {

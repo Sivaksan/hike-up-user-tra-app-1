@@ -70,7 +70,7 @@ const NotificationsScreen = ({ navigation }) => {
             Animated.timing(rowTranslateAnimatedValues[key], {
                 toValue: 0,
                 duration: 200,
-                useNativeDriver: false,
+                useNativetranslator: false,
             }).start(() => {
 
                 const newData = [...listData];
@@ -188,7 +188,7 @@ const NotificationsScreen = ({ navigation }) => {
                 rightOpenValue={-width}
                 leftOpenValue={width}
                 onSwipeValueChange={onSwipeValueChange}
-                useNativeDriver={false}
+                useNativetranslator={false}
                 contentContainerStyle={{ paddingVertical: Sizes.fixPadding - 8.0, }}
                 showsVerticalScrollIndicator={false}
             />

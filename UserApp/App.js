@@ -9,17 +9,17 @@ import { Dimensions, LogBox } from 'react-native'
 import { Sizes } from './constants/styles';
 import DropOffLocationScreen from './screens/dropOffLocation/dropOffLocationScreen';
 import BookNowScreen from './screens/bookNow/bookNowScreen';
-import SelectCabScreen from './screens/selectCab/selectCabScreen';
+import SelectlanguageScreen from './screens/selectlanguage/selectlanguageScreen';
 import SelectPaymentMethodScreen from './screens/selectPaymentMethod/selectPaymentMethodScreen';
-import SearchingForDriversScreen from './screens/searchingForDrivers/searchingForDriversScreen';
-import DriverDetailScreen from './screens/driverDetail/driverDetailScreen';
-import ChatWithDriverScreen from './screens/chatWithDriver/chatWithDriverScreen';
-import RideStartedScreen from './screens/rideStarted/rideStartedScreen';
-import RideEndScreen from './screens/rideEnd/rideEndScreen';
+import SearchingFortranslatorsScreen from './screens/searchingFortranslators/searchingFortranslatorsScreen';
+import translatorDetailScreen from './screens/translatorDetail/translatorDetailScreen';
+import ChatWithtranslatorScreen from './screens/chatWithtranslator/chatWithtranslatorScreen';
+import connectionStartedScreen from './screens/connectionStarted/connectionStartedScreen';
+import connectionEndScreen from './screens/connectionEnd/connectionEndScreen';
 import RatingScreen from './screens/rating/ratingScreen';
 import EditProfileScreen from './screens/editProfile/editProfileScreen';
-import UserRidesScreen from './screens/userRides/userRidesScreen';
-import RideDetailScreen from './screens/rideDetail/rideDetailScreen';
+import UserconnectionsScreen from './screens/userconnections/userconnectionsScreen';
+import connectionDetailScreen from './screens/connectionDetail/connectionDetailScreen';
 import WalletScreen from './screens/wallet/walletScreen';
 import PaymentMethodsScreen from './screens/paymentMethods/paymentMethodsScreen';
 import AddPaymentMethodScreen from './screens/addPaymentMethod/addPaymentMethodScreen';
@@ -72,17 +72,17 @@ function MyApp() {
         <Stack.Screen name="Home" component={DrawerNavigation} options={{ ...TransitionPresets.DefaultTransition }} />
         <Stack.Screen name="DropOffLocation" component={DropOffLocationScreen} />
         <Stack.Screen name="BookNow" component={BookNowScreen} />
-        <Stack.Screen name="SelectCab" component={SelectCabScreen} />
+        <Stack.Screen name="Selectlanguage" component={SelectlanguageScreen} />
         <Stack.Screen name="SelectPaymentMethod" component={SelectPaymentMethodScreen} />
-        <Stack.Screen name="SearchingForDrivers" component={SearchingForDriversScreen} />
-        <Stack.Screen name="DriverDetail" component={DriverDetailScreen} />
-        <Stack.Screen name="ChatWithDriver" component={ChatWithDriverScreen} />
-        <Stack.Screen name="RideStarted" component={RideStartedScreen} />
-        <Stack.Screen name="RideEnd" component={RideEndScreen} />
+        <Stack.Screen name="SearchingFortranslators" component={SearchingFortranslatorsScreen} />
+        <Stack.Screen name="translatorDetail" component={translatorDetailScreen} />
+        <Stack.Screen name="ChatWithtranslator" component={ChatWithtranslatorScreen} />
+        <Stack.Screen name="connectionStarted" component={connectionStartedScreen} />
+        <Stack.Screen name="connectionEnd" component={connectionEndScreen} />
         <Stack.Screen name="Rating" component={RatingScreen} />
         <Stack.Screen name="EditProfile" component={EditProfileScreen} />
-        <Stack.Screen name="UserRides" component={UserRidesScreen} />
-        <Stack.Screen name="RideDetail" component={RideDetailScreen} />
+        <Stack.Screen name="Userconnections" component={UserconnectionsScreen} />
+        <Stack.Screen name="connectionDetail" component={connectionDetailScreen} />
         <Stack.Screen name="Wallet" component={WalletScreen} />
         <Stack.Screen name="PaymentMethods" component={PaymentMethodsScreen} />
         <Stack.Screen name="AddPaymentMethod" component={AddPaymentMethodScreen} />

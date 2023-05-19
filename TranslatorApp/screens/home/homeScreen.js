@@ -4,7 +4,7 @@ import { Colors, Fonts, Sizes } from '../../constants/styles'
 import MapView, { PROVIDER_GOOGLE, Marker } from "react-native-maps";
 import { MaterialIcons } from '@expo/vector-icons';
 import { useFocusEffect } from '@react-navigation/native';
-import RideRequestsScreen from '../rideRequests/rideRequestsScreen';
+import connectionRequestsScreen from '../connectionRequests/connectionRequestsScreen';
 
 const HomeScreen = ({ navigation }) => {
 
@@ -37,12 +37,12 @@ const HomeScreen = ({ navigation }) => {
             {
                 isOnline
                     ?
-                    <RideRequestsScreen navigation={navigation} onPress={() => { setIsOnline(false) }} />
+                    <connectionRequestsScreen navigation={navigation} onPress={() => { setIsOnline(false) }} />
                     :
                     <View style={{ flex: 1, }}>
                         {mapViewWithCurrentLoc()}
                         {onlineOffLineInfoWithIcons()}
-                        {ridesInfo()}
+                        {connectionsInfo()}
                         {goOnlineButton()}
                         {currentLocationIcon()}
                     </View>
@@ -76,9 +76,9 @@ const HomeScreen = ({ navigation }) => {
         )
     }
 
-    function ridesInfo() {
+    function connectionsInfo() {
         return (
-            <View style={styles.ridesInfoWrapStyle}>
+            <View style={styles.connectionsInfoWrapStyle}>
                 <Image
                     source={require('../../assets/images/users/user1.png')}
                     style={{ width: 50.0, height: 50.0, borderRadius: 25.0, }}
@@ -230,7 +230,7 @@ const styles = StyleSheet.create({
         height: 8.0,
         borderRadius: 4.0,
     },
-    ridesInfoWrapStyle: {
+    connectionsInfoWrapStyle: {
         flexDirection: 'row',
         alignItems: 'center',
         backgroundColor: Colors.lightBlackColor,

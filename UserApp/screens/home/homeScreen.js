@@ -8,7 +8,7 @@ import { useFocusEffect } from '@react-navigation/native';
 
 const { height } = Dimensions.get('screen');
 
-const nearestCabs = [
+const nearestlanguages = [
     {
         id: '1',
         coordinate: {
@@ -204,10 +204,10 @@ const HomeScreen = ({ navigation }) => {
                     mapType="terrain"
                 >
                     {
-                        nearestCabs.map((item, index) => (
+                        nearestlanguages.map((item, index) => (
                             <Marker key={`${item.id}`} coordinate={item.coordinate}>
                                 <Image
-                                    source={require('../../assets/images/icons/cab.png')}
+                                    source={require('../../assets/images/icons/language.png')}
                                     style={{
                                         width: 23.0, height: 43.0, resizeMode: 'contain',
                                         transform: [{ rotate: `${rotationsList[index]}deg` }]

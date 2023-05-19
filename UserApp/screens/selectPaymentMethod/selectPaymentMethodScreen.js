@@ -50,7 +50,7 @@ const SelectPaymentMethodScreen = ({ navigation }) => {
                 {directionInfo()}
                 {header()}
                 {paymentSheet()}
-                {bookRideButton()}
+                {bookconnectionButton()}
 
             </View>
         </SafeAreaView>
@@ -85,11 +85,11 @@ const SelectPaymentMethodScreen = ({ navigation }) => {
         )
     }
 
-    function bookRideButton() {
+    function bookconnectionButton() {
         return (
             <TouchableOpacity
                 activeOpacity={0.8}
-                onPress={() => { navigation.push('SearchingForDrivers') }}
+                onPress={() => { navigation.push('SearchingFortranslators') }}
                 style={{ ...styles.buttonStyle, position: 'absolute', bottom: 0.0, right: 0.0, left: 0.0, }}
             >
                 <Text style={{ ...Fonts.whiteColor18Bold }}>
@@ -216,7 +216,7 @@ const SelectPaymentMethodScreen = ({ navigation }) => {
     }
 
     function directionInfo() {
-        const currentCabLocation = {
+        const currentlanguageLocation = {
             latitude: 22.715024,
             longitude: 88.474119,
         }
@@ -238,12 +238,12 @@ const SelectPaymentMethodScreen = ({ navigation }) => {
             >
                 <MapViewDirections
                     origin={userLocation}
-                    destination={currentCabLocation}
+                    destination={currentlanguageLocation}
                     apikey={Key.apiKey}
                     strokeColor={Colors.primaryColor}
                     strokeWidth={3}
                 />
-                <Marker coordinate={currentCabLocation}>
+                <Marker coordinate={currentlanguageLocation}>
                     <Image
                         source={require('../../assets/images/icons/marker2.png')}
                         style={{ width: 50.0, height: 50.0, resizeMode: 'stretch', }}

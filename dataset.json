@@ -1,0 +1,51 @@
+[
+  {
+    "city": "New York",
+    "country": "United States",
+    "latitude": 40.7128,
+    "longitude": -74.0060,
+    "languages": ["English", "Spanish"]
+  },
+  {
+    "city": "Paris",
+    "country": "France",
+    "latitude": 48.8566,
+    "longitude": 2.3522,
+    "languages": ["French"]
+  },
+  {
+    "city": "Tokyo",
+    "country": "Japan",
+    "latitude": 35.6895,
+    "longitude": 139.6917,
+    "languages": ["Japanese"]
+  },
+  {
+    "city": "Berlin",
+    "country": "Germany",
+    "latitude": 52.5200,
+    "longitude": 13.4050,
+    "languages": ["German"]
+  },
+  {
+    "city": "Moscow",
+    "country": "Russia",
+    "latitude": 55.7512,
+    "longitude": 37.6184,
+    "languages": ["Russian"]
+  },
+  {
+    "city": "Mumbai",
+    "country": "India",
+    "latitude": 19.0760,
+    "longitude": 72.8777,
+    "languages": ["Hindi", "Marathi"]
+  },
+  {
+    "city": "Colombo",
+    "country": "Sri Lanka",
+    "latitude": 6.9271,
+    "longitude": 79.8612,
+    "languages": ["Sinhala", "Tamil"]
+  }
+]

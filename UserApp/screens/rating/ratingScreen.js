@@ -20,7 +20,7 @@ const RatingScreen = ({ navigation }) => {
             <View style={{ flex: 1, }}>
                 {backArrow()}
                 <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom: Sizes.fixPadding * 2.0 }}>
-                    {driverInfo()}
+                    {translatorInfo()}
                     {ratingInfo()}
                     {complimentInfo()}
                     {submitButton()}
@@ -163,13 +163,13 @@ const RatingScreen = ({ navigation }) => {
         )
     }
 
-    function driverInfo() {
+    function translatorInfo() {
         return (
             <View style={{ alignItems: 'center', marginHorizontal: Sizes.fixPadding * 2.0, }}>
                 <View style={{ alignItems: 'center', justifyContent: 'center' }}>
                     <Image
                         source={require('../../assets/images/users/user2.png')}
-                        style={styles.driverImageStyle}
+                        style={styles.translatorImageStyle}
                     />
                     <View style={styles.ratingInfoWrapStyle}>
                         <Text numberOfLines={1} style={{ maxWidth: width / 12.0, ...Fonts.whiteColor12Bold }}>
@@ -212,7 +212,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
     },
-    driverImageStyle: {
+    translatorImageStyle: {
         width: width / 4.0,
         height: width / 4.0,
         borderRadius: (width / 4.0) / 2.0,

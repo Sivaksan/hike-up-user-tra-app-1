@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Hike-Up Translator App",
-    "slug": "HikeUpDriverApp",
+    "slug": "HikeUpTranslatorApp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/hikeup.png",
@@ -15,12 +15,12 @@
       "**/*"
     ],
     "ios": {
-      "bundleIdentifier": "com.render.driverapp",
+      "bundleIdentifier": "com.render.Translatorapp",
       "buildNumber": "1.0.0",
       "supportsTablet": true
     },
     "android": {
-      "package": "com.render.driverapp",
+      "package": "com.render.Translatorapp",
       "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/hikeup.png",
@@ -34,6 +34,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "9b871bc2-c2fe-4ab8-b17f-76865e11caf5"
+      }
     }
   }
 }

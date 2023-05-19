@@ -16,12 +16,12 @@ const GoToPickupScreen = ({ navigation }) => {
             <View style={{ flex: 1 }}>
                 {directionInfo()}
                 {header()}
-                {passengerInfoSheet()}
+                {userInfoSheet()}
             </View>
         </SafeAreaView>
     )
 
-    function passengerInfoSheet() {
+    function userInfoSheet() {
         return (
             <Animatable.View
                 animation="slideInUp"
@@ -31,7 +31,7 @@ const GoToPickupScreen = ({ navigation }) => {
             >
                 {indicator()}
                 <ScrollView showsVerticalScrollIndicator={false}>
-                    {passengerInfo()}
+                    {userInfo()}
                 </ScrollView>
                 {goToPickupButton()}
             </Animatable.View>
@@ -48,7 +48,7 @@ const GoToPickupScreen = ({ navigation }) => {
         return (
             <TouchableOpacity
                 activeOpacity={0.8}
-                onPress={() => { navigation.push('StartRide') }}
+                onPress={() => { navigation.push('Startconnection') }}
                 style={styles.buttonStyle}
             >
                 <Text style={{ ...Fonts.whiteColor18Bold }}>
@@ -58,16 +58,16 @@ const GoToPickupScreen = ({ navigation }) => {
         )
     }
 
-    function passengerInfo() {
+    function userInfo() {
         return (
             <View style={{ marginTop: Sizes.fixPadding, }}>
-                {passengerImageWithCallAndMessage()}
-                {passengerDetail()}
+                {userImageWithCallAndMessage()}
+                {userDetail()}
             </View>
         )
     }
 
-    function passengerDetail() {
+    function userDetail() {
         return (
             <View style={{ marginTop: Sizes.fixPadding, marginBottom: Sizes.fixPadding * 3.0 }}>
                 <Text style={{ textAlign: 'center', ...Fonts.blackColor17SemiBold }}>
@@ -95,7 +95,7 @@ const GoToPickupScreen = ({ navigation }) => {
         )
     }
 
-    function passengerImageWithCallAndMessage() {
+    function userImageWithCallAndMessage() {
         return (
             <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                 <View style={styles.callAndMessageIconWrapStyle}>
@@ -107,11 +107,11 @@ const GoToPickupScreen = ({ navigation }) => {
                 </View>
                 <Image
                     source={require('../../assets/images/users/user2.png')}
-                    style={styles.passengerImageStyle}
+                    style={styles.userImageStyle}
                 />
                 <TouchableOpacity
                     activeOpacity={0.8}
-                    onPress={() => { navigation.push('ChatWithPassenger') }}
+                    onPress={() => { navigation.push('ChatWithuser') }}
                     style={styles.callAndMessageIconWrapStyle}
                 >
                     <MaterialIcons
@@ -242,7 +242,7 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.primaryColor,
         paddingVertical: Sizes.fixPadding + 3.0,
     },
-    passengerImageStyle: {
+    userImageStyle: {
         width: width / 4.0,
         height: width / 4.0,
         borderRadius: (width / 4.0) / 2.0,
